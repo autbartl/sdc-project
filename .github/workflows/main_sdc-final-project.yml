@@ -22,15 +22,15 @@ jobs:
     - name: Log in to registry
       uses: docker/login-action@v1
       with:
-        registry: https://mcr.microsoft.com/
-        username: ${{ secrets.AzureAppService_ContainerUsername_9f473c91c54d4f79a4e25645da57f277 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_c260e22d5c1f4d82a428e7b1fdc535b1 }}
+        registry: https://index.docker.io/v1/
+        username: ${{ secrets.AzureAppService_ContainerUsername_570826e314cb41e09903ff2195b73c56 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_af8cafd123ed4f35a700b53dd2171011 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_9f473c91c54d4f79a4e25645da57f277 }}/appsvc/staticsite:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_570826e314cb41e09903ff2195b73c56 }}/mercury-dashboard-bartl:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'sdc-final-project'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5fbc63ae54c64294b71014fb55f76124 }}
-        images: 'mcr.microsoft.com/${{ secrets.AzureAppService_ContainerUsername_9f473c91c54d4f79a4e25645da57f277 }}/appsvc/staticsite:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_956fcac83c0e43358175e96a828a494f }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_570826e314cb41e09903ff2195b73c56 }}/mercury-dashboard-bartl:${{ github.sha }}'
