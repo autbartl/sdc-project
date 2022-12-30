@@ -8,6 +8,7 @@ EXPOSE ${SSL}
 
 USER $NB_USER
 
+RUN start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
 RUN python -m pip install mljar-mercury
 RUN python -m pip install fastapi
 RUN python -m pip install pydantic
