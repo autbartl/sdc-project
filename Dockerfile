@@ -6,7 +6,6 @@ EXPOSE ${FASTAPI}
 EXPOSE ${MERCURY_SERVER_PORT}
 EXPOSE ${SSL}
 
-
 USER $NB_USER
 
 RUN python -m pip install mljar-mercury
