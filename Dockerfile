@@ -6,8 +6,6 @@ EXPOSE ${FASTAPI}
 EXPOSE ${MERCURY_SERVER_PORT}
 EXPOSE ${SSL}
 
-RUN start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
-
 USER $NB_USER
 
 RUN python -m pip install mljar-mercury
