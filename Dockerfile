@@ -1,7 +1,6 @@
 FROM jupyter/datascience-notebook:latest
 
-EXPOSE ${WEBSITES_PORT}
-EXPOSE ${SSL}
+EXPOSE 80
 
 USER $NB_USER
 
