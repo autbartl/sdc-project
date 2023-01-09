@@ -1,6 +1,7 @@
 FROM jupyter/datascience-notebook:latest
 
 EXPOSE 80
+EXPOSE 443
 
 USER $NB_USER
 
