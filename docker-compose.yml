@@ -11,7 +11,6 @@ services:
     ports:
       - 8888:80
       - 8000:8000
-      - 443:80
     environment:
       - JUPYTER_ENABLE_LAB: "yes"
     container_name: mercury-dashboard-bartl
