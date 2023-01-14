@@ -1,7 +1,6 @@
 FROM jupyter/datascience-notebook:latest
 
-EXPOSE 80
-EXPOSE 443
+EXPOSE ${WEBSITES_PORT}
 
 USER $NB_USER
 
