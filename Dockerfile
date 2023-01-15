@@ -1,8 +1,10 @@
 FROM jupyter/datascience-notebook:latest
 
-EXPOSE ${WEBSITES_PORT}
+EXPOSE ${JUPYTER_NOTEBOOK}
+EXPOSE ${MERCURY}
+EXPOSE ${MERCURY_SERVER_PORT}
+EXPOSE ${SSL}
 
-CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
 
 USER $NB_USER
 
