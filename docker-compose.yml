@@ -10,13 +10,13 @@ services:
       - ./:/home/jovyan/work
     ports:
       - 8000:${MERCURY:-8000}
-      - 8888:${JUPYTER_NOTEBOOK:-8888}
+      #- 8888:${JUPYTER_NOTEBOOK:-8888}
       - 80:${MERCURY_SERVER_PORT:-80}
       - 443:${SSL:-443}
     environment:
       - JUPYTER_ENABLE_LAB: "yes"
       - MERCURY=${MERCURY:-8000}
       - MERCURY_SERVER_PORT=${MERCURY_SERVER_PORT:-80}
-      - JUPYTER_NOTEBOOK=${JUPYTER_NOTEBOOK:-8888}
+      #- JUPYTER_NOTEBOOK=${JUPYTER_NOTEBOOK:-8888}
       - SSL=${SSL:-443}
     container_name: mercury-dashboard-bartl
