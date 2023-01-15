@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: jupyter/datascience-notebook:latest
-    command: "start-notebook.sh --LabApp.token='' --LabApp.password=''"
+    #command: "start-notebook.sh --LabApp.token='' --LabApp.password=''"
     volumes:
       - ./:/home/jovyan/work
     ports:
