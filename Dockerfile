@@ -10,11 +10,11 @@ COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/work
 
 #CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
 
-
 USER $NB_USER
 
 RUN python -m pip install mljar-mercury
 RUN python -m pip install fastapi
 RUN python -m pip install pydantic
 RUN python -m pip install uvicorn
-RUN mercury run 0.0.0.0:8000 mercury-notebook.ipynb
+
+CMD ["mercury", "run", "0.0.0.0:8000", "mercury-notebook.ipynb"]
