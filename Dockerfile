@@ -5,6 +5,8 @@ EXPOSE ${MERCURY}
 EXPOSE ${MERCURY_SERVER_PORT}
 EXPOSE ${SSL}
 
+CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
+
 
 USER $NB_USER
 
