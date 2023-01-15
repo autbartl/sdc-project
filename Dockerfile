@@ -5,7 +5,7 @@ EXPOSE ${MERCURY}
 EXPOSE ${MERCURY_SERVER_PORT}
 EXPOSE ${SSL}
 
-COPY ./exercise3-bartl.ipynb /home/jovyan/work
+COPY ./mercury-notebook.ipynb /home/jovyan/work
 COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/work
 
 CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
