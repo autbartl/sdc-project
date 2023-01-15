@@ -8,6 +8,7 @@ EXPOSE ${SSL}
 COPY ./mercury-notebook.ipynb /home/jovyan/work
 COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/work
 
+#CMD delete this line
 #CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
 
 USER $NB_USER
