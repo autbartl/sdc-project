@@ -1,9 +1,10 @@
 FROM jupyter/datascience-notebook:latest
 
-EXPOSE ${MERCURY}
+#EXPOSE ${MERCURY}
 #EXPOSE ${JUPYTER_NOTEBOOK}
 EXPOSE ${MERCURY_SERVER_PORT}
 EXPOSE ${SSL}
+EXPOSE 8000
 
 COPY ./mercury-notebook.ipynb /home/jovyan/work
 COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/work
