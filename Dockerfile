@@ -14,6 +14,7 @@ COPY ./mercury-notebook.ipynb /home/jovyan/mercury
 
 
 #CMD ["start-notebook.sh"]
+#CMD delete this ine
 CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
 
 USER $NB_USER
