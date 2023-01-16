@@ -8,6 +8,7 @@ services:
     #command: "start-notebook.sh --LabApp.token='' --LabApp.password=''"
     volumes:
       - ./:/home/jovyan/work
+      - ./:/home/jovyan/mercury
     ports:
       - 80:${MERCURY:-8000}
       #- 8888:${JUPYTER_NOTEBOOK:-8888}
