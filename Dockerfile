@@ -12,6 +12,8 @@ COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/work
 COPY ./mercury-notebook.ipynb /home/jovyan/mercury
 #COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/mercury
 
+
+CMD ["start-notebook.sh"]
 #CMD delete this line
 #CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
 
