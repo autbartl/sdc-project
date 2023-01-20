@@ -24,4 +24,4 @@ RUN python -m pip install fastapi
 RUN python -m pip install pydantic
 RUN python -m pip install uvicorn
 
-CMD ["python3", "mercury", "run", "0.0.0.0:8000", "mercury-notebook.ipynb"]
+#CMD ["python3", "mercury", "run", "0.0.0.0:8000", "mercury-notebook.ipynb"]
