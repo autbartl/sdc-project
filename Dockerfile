@@ -17,6 +17,8 @@ COPY ./mercury-notebook.ipynb /home/jovyan/mercury
 #CMD delete this ine
 #CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
 
+CMD ["python3", "-m", "ipykernel", "install", "--user", "--name=simple_venv"]
+
 USER $NB_USER
 
 RUN python -m pip install mljar-mercury
