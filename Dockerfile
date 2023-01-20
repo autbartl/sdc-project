@@ -1,6 +1,6 @@
 FROM jupyter/datascience-notebook:latest
 
-EXPOSE ${JUPYTER_NOTEBOOK}
+#EXPOSE ${JUPYTER_NOTEBOOK}
 EXPOSE ${MERCURY}
 EXPOSE ${MERCURY_SERVER_PORT}
 EXPOSE ${SSL}
@@ -24,4 +24,5 @@ RUN python -m pip install fastapi
 RUN python -m pip install pydantic
 RUN python -m pip install uvicorn
 
-CMD ["python3", "mercury", "run", "0.0.0.0:8000", "mercury-notebook.ipynb"]
+CMD ["python3", "mercury", "run", "0.0.0.0:8000"]
+#CMD ["python3", "mercury", "runserver", "0.0.0.0:8000", "--runworker"]
