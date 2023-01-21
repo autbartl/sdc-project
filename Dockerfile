@@ -6,10 +6,11 @@ EXPOSE ${MERCURY_SERVER_PORT}
 EXPOSE ${SSL}
 EXPOSE 8000
 
-COPY ./mercury-notebook.ipynb /home/jovyan/work
-COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/work
+#COPY ./mercury-notebook.ipynb /home/jovyan/work
+#COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/work
 
 COPY ./mercury-notebook.ipynb /app
+COPY ./CovidFaelle_Altersgruppe.csv /app
 WORKDIR /app
 #COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/mercury
 
@@ -27,5 +28,5 @@ RUN python -m pip install uvicorn
 
 #CMD ["mercury", "run", "0.0.0.0:8000"]
 
-CMD ["mercury", "add", "mercury-notebook.ipynb"]
+#CMD ["mercury", "add", "mercury-notebook.ipynb"]
 CMD ["mercury", "run", "0.0.0.0:8000", "mercury-notebook.ipynb"]
