@@ -10,6 +10,7 @@ COPY ./mercury-notebook.ipynb /home/jovyan/work
 COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/work
 
 COPY ./mercury-notebook.ipynb /home/jovyan/mercury
+WORKDIR /home/jovyan/mercury
 #COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/mercury
 
 
