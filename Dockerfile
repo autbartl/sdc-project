@@ -25,4 +25,6 @@ RUN python -m pip install pydantic
 RUN python -m pip install uvicorn
 
 #CMD ["mercury", "run", "0.0.0.0:8000"]
+
+CMD ["mercury", "add", "/home/jovyan/work/mercury-notebook.ipynb"]
 CMD ["mercury", "run", "0.0.0.0:8000", "mercury-notebook.ipynb"]
