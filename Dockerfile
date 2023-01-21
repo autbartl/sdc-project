@@ -27,5 +27,5 @@ RUN python -m pip install uvicorn
 
 #CMD ["mercury", "run", "0.0.0.0:8000"]
 
-CMD ["mercury", "add", "./mercury-notebook.ipynb"]
+CMD ["mercury", "add", "mercury-notebook.ipynb"]
 CMD ["mercury", "run", "0.0.0.0:8000", "mercury-notebook.ipynb"]
