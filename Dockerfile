@@ -8,7 +8,7 @@ EXPOSE 8000
 
 WORKDIR /app
 
-
+COPY ./requirements.txt /app
 COPY ./mercury-notebook.ipynb /app
 COPY ./CovidFaelle_Altersgruppe.csv /app
 
