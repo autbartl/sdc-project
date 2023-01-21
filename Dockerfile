@@ -6,12 +6,14 @@ EXPOSE ${MERCURY_SERVER_PORT}
 EXPOSE ${SSL}
 EXPOSE 8000
 
+WORKDIR /app
+
 #COPY ./mercury-notebook.ipynb /home/jovyan/work
 #COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/work
 
 COPY ./mercury-notebook.ipynb /app
 COPY ./CovidFaelle_Altersgruppe.csv /app
-WORKDIR /app
+
 #COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/mercury
 
 
