@@ -17,7 +17,7 @@ COPY ./mercury-notebook.ipynb /home/jovyan/mercury
 #CMD delete this ine
 CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
 
-CMD ["python3", "-m", "ipykernel", "install", "--user", "--name=simple_venv"]
+#CMD ["python3", "-m", "ipykernel", "install", "--user", "--name=simple_venv"]
 
 #USER $NB_USER
 
@@ -26,5 +26,5 @@ RUN python -m pip install fastapi
 RUN python -m pip install pydantic
 RUN python -m pip install uvicorn
 
-CMD ["python3", "mercury", "run", "0.0.0.0:8000"]
+CMD ["mercury", "run", "0.0.0.0:8000"]
 #CMD ["python3", "mercury", "runserver", "0.0.0.0:8000", "--runworker"]
