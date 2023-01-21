@@ -7,8 +7,8 @@ services:
     image: jupyter/datascience-notebook:latest
     #command: "start-notebook.sh --LabApp.token='' --LabApp.password=''"
     volumes:
-      - ./:/home/jovyan/work
-      - ./:/home/jovyan/mercury
+      #- ./:/home/jovyan/work
+      #- ./:/home/jovyan/mercury
     ports:
       #- 8888:${JUPYTER_NOTEBOOK:-8888}
       - 8000:${MERCURY:-8000}
