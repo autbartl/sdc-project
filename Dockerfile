@@ -9,8 +9,8 @@ EXPOSE 8000
 COPY ./mercury-notebook.ipynb /home/jovyan/work
 COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/work
 
-COPY ./mercury-notebook.ipynb /home/jovyan/mercury
-WORKDIR /home/jovyan/mercury
+COPY ./mercury-notebook.ipynb /app
+WORKDIR /app
 #COPY ./CovidFaelle_Altersgruppe.csv /home/jovyan/mercury
 
 
