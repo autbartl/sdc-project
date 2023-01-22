@@ -1,9 +1,5 @@
 FROM jupyter/datascience-notebook:latest
 
-#EXPOSE ${JUPYTER_NOTEBOOK}
-EXPOSE ${MERCURY}
-EXPOSE ${MERCURY_SERVER_PORT}
-EXPOSE ${SSL}
 EXPOSE 8000
 
 WORKDIR /app
@@ -11,10 +7,6 @@ WORKDIR /app
 COPY ./requirements.txt /app
 COPY ./mercury-notebook.ipynb /app
 COPY ./CovidFaelle_Altersgruppe.csv /app
-
-#CMD ["start-notebook.sh", "--NotebookApp.token=''", "--NotebookApp.password=''"]
-
-#USER $NB_USER
 
 RUN pip install -r requirements.txt
 
