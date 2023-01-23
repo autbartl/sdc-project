@@ -2,7 +2,7 @@
 
 ## Architecture
 
-![Alt text](architecture.png "Title")
+![Application architecture](architecture.PNG "Application architecture")
 
 
 ## GitHub Action
