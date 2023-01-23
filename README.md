@@ -12,10 +12,11 @@ Link: https://github.com/autbartl/sdc-project/actions
 
 ## Docker
 
-#### Docker Hub
+### Docker Hub
+
 Link: https://hub.docker.com/repository/docker/ds21m029/mercury-dashboard-bartl/general
 
-#### Dockerfile
+### Dockerfile
 
 ```
 FROM jupyter/datascience-notebook:latest
