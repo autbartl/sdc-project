@@ -1,6 +1,6 @@
 # Covid Mercury Dashboard for AUT
 
-## Architecture (simplyfied)
+## Architecture (simplified)
 
 ![Application architecture](architecture.PNG "Application architecture")
 
@@ -13,7 +13,7 @@ Link: https://github.com/autbartl/sdc-project/actions
 ## Docker
 
 #### Docker Hub
-https://hub.docker.com/repository/docker/ds21m029/mercury-dashboard-bartl/general
+Link: https://hub.docker.com/repository/docker/ds21m029/mercury-dashboard-bartl/general
 
 #### Dockerfile
 
@@ -35,4 +35,4 @@ CMD ["mercury", "run", "0.0.0.0:8000", "mercury-notebook.ipynb"]
 
 ## Azure Web App
 
-https://sdc-final-project.azurewebsites.net/
+Link: https://sdc-final-project.azurewebsites.net/
