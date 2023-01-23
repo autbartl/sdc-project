@@ -1,6 +1,6 @@
 # Covid Mercury Dashboard for AUT
 
-## Architecture
+## Architecture (simplyfied)
 
 ![Application architecture](architecture.PNG "Application architecture")
 
